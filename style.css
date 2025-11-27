@@ -1,0 +1,187 @@
+:root {
+    --primary: #4a6fa5;
+    --accent: #ff7e5f;
+    --dark: #1f2128;
+    --light: #f0f3f7;
+    --card: #ffffff;
+    --shadow: 0 6px 20px rgba(0, 0, 0, .1);
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: #333;
+}
+
+/* ===== HERO ===== */
+.hero {
+    width: 100%;
+    height: 340px;
+    background: url("assets/bg-profile.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.3);
+    backdrop-filter: blur(4px);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: var(--shadow);
+}
+
+.name {
+    font-size: 2.4rem;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.info {
+    font-size: 1.2rem;
+    opacity: .9;
+}
+
+.sub {
+    font-size: 1rem;
+    opacity: .7;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    width: min(900px, 90%);
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.section h2 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+    margin-bottom: 1rem;
+}
+
+/* ===== EDUCATION ===== */
+.edu-grid {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.edu-card {
+    position: relative;
+    height: 180px;
+    padding: 1.2rem;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+
+.edu-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+    backdrop-filter: blur(2px);
+}
+
+.edu-content {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+.edu-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.edu-content p {
+    opacity: .9;
+    margin-top: .3rem;
+}
+
+.year {
+    font-size: .85rem;
+    opacity: .85;
+    margin-top: .5rem;
+}
+
+/* ===== BADGES ===== */
+.achievements {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+}
+
+.badge {
+    padding: 1rem;
+    border-left: 4px solid var(--accent);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.badge h3 {
+    margin-bottom: .3rem;
+}
+
+/* ===== CONTACT ===== */
+.contact-box {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: .9rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+}
+
+.btn:hover {
+    background: #2d5086;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    font-size: .9rem;
+    color: #555;
+}
